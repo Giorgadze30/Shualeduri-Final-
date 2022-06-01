@@ -1,0 +1,646 @@
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    -webkit-appearance: none;
+}
+
+body {
+    overflow:hidden;
+    margin:0;
+    display:grid;
+    grid-template-columns: 15% 80%;  
+}
+
+/***************************** SECTIONS *****************************/
+section[leftmenu] {
+    background-color:#2e2e2e;; 
+}
+
+section[rightbody] { 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+section[rightbody] > section[header]{
+    background-color:white;
+    display:grid;
+    grid-template-columns:50% 50% ; 
+    padding:10px;
+    padding-top:10px;
+}
+
+section[rightbody] > section[header] > section[search]{ 
+    padding-top:15px; 
+    padding-left:15px;
+}
+ 
+
+section[rightbody] > section[header] > section[search] > input {
+    width: 300px;
+    height: 40px;
+    background-color: #ededed;;
+    border: none;
+    padding-left: 10px;
+    background-image:url("../img/icons/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    background-position-x: 282px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+section[rightbody] > section[header] > section[menu] { 
+    display: flex;
+    flex-direction: row; 
+    justify-content: end;
+    gap:40px;
+    padding:5px;
+    padding-top:15px;
+    padding-right: 300px;
+}
+section[rightbody] > section[header] > section[menu]>span{ 
+    padding-top: 15px;
+    color:#EA4C89;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section[rightbody] > section[header] > section[menu]>span:hover{ 
+    padding-top: 10px;
+    cursor:pointer;
+    color:#F082AC;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section[menuleft] {
+    height: 893px;
+}
+
+section[menuleft]>section[menu]{
+    padding-top:100px;
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    gap:15px;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+section[menuleft]>section[following]{
+    padding-top:100px;
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%; 
+    padding-left:30px;
+    padding-right:30px;
+}
+
+section[menuleft]>section[following]>span{
+    color:white;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top:30px;
+    padding-left:20px;
+}
+
+section[leftmenu]>section[header]{
+    display: flex;
+    padding: 10px;
+    padding-top: 36px;
+    justify-content: space-between;
+}
+
+section[rightbody]>section[body]>section[tabs]{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    max-width: 1100px;
+    padding-left: 170px;
+    gap: 115px;
+}
+
+section[content] {
+    padding-top:30px;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    gap:20px;
+    padding-left: 200px;
+}
+
+section[loadMore]{ 
+    display:grid; 
+    grid-template-columns: 1fr;
+    padding-left:640px;
+    padding-top:40px;
+    padding-bottom: 60px;
+}
+
+section[footercontent]{
+    padding-top: 30px;
+    background-color: #f7f7f7;
+    height:350px;
+}
+
+section[footer] {
+    display:grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15% 15% 15%;
+    max-width: 1000px;
+    padding-left: 135px;
+    padding-top: 30px; 
+}
+
+section[mainfootercontent]{ 
+    padding-top: 30px;
+    background-color: #ffffff;
+    height:350px;
+}
+
+section[mainfooter]{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display:grid;
+    grid-template-columns: 30% 30% 30% 30%;
+    max-width: 1000px;
+    padding-left: 150px;
+    padding-top: 30px; 
+}
+
+section[foot] {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1100px;
+    padding-left: 150px;
+}
+
+section[socials] {
+    display:flex;
+    flex-direction: row;
+    gap:20px; 
+    padding-bottom:50px;
+}
+
+section[copyright] {
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display:flex;
+    flex-direction: row; 
+    padding-bottom:50px;
+}
+
+section[body] > table {
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left: 150px;
+    max-width:1300px;  
+}
+
+
+/***************************** Individual Components *****************************/ 
+
+#profilepng {
+    height: 40px;
+    width: 40px;
+}
+#notifpng {
+    padding-top: 10px;
+    height: 20px;
+    width: 20px;
+}
+#mailpng {
+    padding-top: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+#profilepng,
+#notifpng,
+#mailpng:hover {
+    cursor: pointer;
+}
+#uploadBtn{  
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  
+
+}
+#uploadBtn:hover,
+#uploadBtn:focus {
+  background-color: #F082AC;
+}
+
+#homespan{
+    background-color:#EA4C89 ;
+}
+
+#menu_icon_main{
+    height: 20px;
+    width: 25px;
+    padding-right: 10px;
+}
+
+#menu_icon_main:hover{
+    cursor: pointer;
+}
+ 
+#ds {
+    color:white;
+    padding-left:20px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#to {
+    color:white;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: lighter; 
+}
+
+#line{
+    border: 1/2px solid #838383; 
+}
+
+#lineDiv{
+    padding-top:15px;
+}
+ 
+#tabsDiv {
+    padding-top:5px;
+}
+
+#filterBtn {
+    padding-left: 58px;
+    font-size: larger;
+    color: #b3acac;
+    background-color: transparent;
+    border: 1px solid #b3acac;
+    width: 150px;
+    height: 50px;
+    background-image: url(../img/icons/filt.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 20px;
+    background-size: 30px;
+    border-radius: 8px;
+}
+
+#filterBtn:hover{
+    cursor:pointer;
+    color:#EA4C89;
+    border: 1px solid #EA4C89;
+    background-image: url(../img/icons/filt2.png);
+}
+
+#filterdiv {
+    padding-left: 100px; 
+}
+
+#loadMoreBtn {
+    background-color: rgb(231, 231, 231);
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    width: 200px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    
+}
+
+#loadMoreBtn:hover {
+    background-color:#EA4C89;
+}
+
+#footerText {
+    padding-left:150px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    padding-top:20px;
+}
+
+#fi{
+    color:black; 
+    font-weight:lighter;
+}
+#se{
+    color:black; 
+    font-weight:bolder;
+}
+  
+#gridTitle > th {  
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    border-bottom:1px solid #dbdbdb;
+    width:200px;
+    text-align:left;
+    padding-left:10px;
+    padding-bottom:30px; 
+}
+
+/***************************** CLASSES *****************************/
+
+
+.menu_icons {
+    height: 20px;
+    width: 20px;
+}
+
+.menu_texts{
+    padding-left:10px; 
+    margin-top:5px;
+    color:white;
+    text-decoration: none !important;
+}
+ 
+.menu_item{
+    background-color: transparent;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative; 
+    padding-left:30px;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.menu_item:hover,
+.menu_item:focus {
+  background-color: #EA4C89;
+}
+ 
+.tabs{
+    background-color: transparent;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 22px;
+    position: relative;
+    padding-left: 25px;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.tabs:hover{
+    background-color: #ededed;
+}
+
+.contentImg{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.contentImg:hover {
+    cursor:pointer;  
+    transform: scale(1.2); 
+}
+
+.contentText{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    padding-top:13px; 
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width:250px;
+}
+
+.contentTitle{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000000; 
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer_item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+
+}
+
+.footer_texts{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    padding-top:10px;
+}
+
+.location_texts {
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #919191;
+    padding-top:10px;
+}
+
+.footer_icons {
+    height:100px;
+    width:100px;
+}
+
+.followButton{
+    background-color:  #c5c5c5;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    width:100px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.followedButton {
+    background-color: #e7d5dc;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    width:100px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.fullname {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.followButton:hover{
+    background-color: #ff77ab;
+}
+
+.followedButton:hover {
+    background-color: #ff77ab;
+}
+
+.spanlist{
+    padding-top:30px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap:10px;
+}
+
+.spanlist>span:hover{
+    cursor:pointer
+}
+
+.social_icons{
+    height:25px;
+    width:25px;
+}
+
+.social_icons:hover{
+    cursor:pointer;
+}
+
+.rows > td {
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-bottom:1px solid #dbdbdb;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    color: #bbbbbb;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    height:40px; 
+}
+
+.rows:hover >td {
+    cursor:pointer;
+    background-color:#838383;
+    color:rgb(0, 0, 0);  
+}
+ 
+.rowsActive:hover >td {
+    cursor:pointer;
+    background-color:#838383;  
+    color:rgb(65, 10, 10);
+}
+
+.rowsActive > td {
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-bottom:1px solid #dbdbdb;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    color: #f03e82;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    height:40px; 
+}
